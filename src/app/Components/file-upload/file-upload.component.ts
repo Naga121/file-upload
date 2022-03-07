@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { FileService } from 'src/app/Service/file.service';
 
 @Component({
@@ -11,9 +12,13 @@ export class FileUploadComponent implements OnInit {
   shortLink:string='';
   loading:boolean=false;
   file!:File;
-  constructor(private fileService:FileService) { }
+  form:any;
+  constructor(private fileService:FileService,private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
+    this.form=this.formBuilder.group({
+      email:['',[Validators.required]]
+    })
   }
 
   onChange(event:any){
@@ -29,6 +34,10 @@ export class FileUploadComponent implements OnInit {
         this.loading=false;
       }
     });
+  }
+  addEmail(){
+    console.log(this.form.value);
+
   }
 
 }

@@ -1,0 +1,48 @@
+
+#file-upload{
+  width: 300px;
+  background: white;
+  border: none;
+  outline: none;
+}
+
+.btn-primary{
+  &:hover .drop-downu{
+    display: flex;
+  }
+  &:focus-within .drop-downu{
+    display: inline-flex;
+  }
+  .drop-downu{
+    position: absolute;
+    width: fit-content;
+    display: none;
+    flex-direction: row;
+    top: 260px;
+    left: 260px;
+    background-color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+    justify-content: space-between;
+    text-align: justify;
+    box-shadow: 0px 1px 2px 0px rebeccapurple;
+    transform: translateX(-10%);
+    .links{
+      display: block;
+      color: #00384c;
+      padding: 5px 5px;
+      text-decoration: none;
+      &:hover{
+        background-color: whitesmoke;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+

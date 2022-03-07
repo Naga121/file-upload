@@ -1,4 +1,3 @@
-
 <div class="jumbotron jumbotron-fluid bg-secondary">
   <h1 class="display-3 text-center">File Upload!</h1>
 </div>
@@ -16,4 +15,28 @@
 
   </div>
 </div>
+<div class="container mt-3">
+  <form [formGroup]="form">
+    <tag-input name="keywordsearch" [placeholder]="'Type and Press Enter'" formControlName="email"></tag-input>
+    <button type="submit" (click)="addEmail()">email</button>
+  </form>
+</div>
+<div class="container mt-3">
+  <input type="file" id="file-upload">
+</div>
 
+
+<div class="container">
+  <button class="btn btn-primary" type="button" id="triggerId" data-toggle="dropdown"
+    aria-haspopup="true" aria-expanded="false">
+    Dropdown
+    <div class="drop-downu" aria-labelledby="triggerId">
+      <a class="links" href="#">Action</a>
+      <a class="links" href="#">Disabled action</a>
+      <a class="links" href="#">Action</a>
+      <div class="dropdown-divider"></div>
+      <a class="links" href="#">After divider action</a>
+    </div>
+  </button>
+
+</div>
